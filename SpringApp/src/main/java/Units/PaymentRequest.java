@@ -1,5 +1,8 @@
-package mySpringApp.ru;
+package Units;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PaymentRequest {
 
     private String name;

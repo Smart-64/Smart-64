@@ -1,4 +1,4 @@
-package mySpringApp.ru;
+package Units;
 
 public class BaseResponse {
     private final String status;
