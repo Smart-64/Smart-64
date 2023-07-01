@@ -3,6 +3,7 @@ package Controller;
 import Units.PaymentRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +19,11 @@ public class Controller extends HttpServlet {
     public String getNameAndAge() {
         PaymentRequest egor = new PaymentRequest("Egor", 15);
 
-        return "index"; // return templates.html from package /resources/templates
+        ModelAndView model = new ModelAndView("Egor");
+        model.addObject("name", egor.getName());
+        model.addObject("age", egor.getAge());
+
+        return "Egor"; // return templates.html from package /resources/templates
 
     }
 

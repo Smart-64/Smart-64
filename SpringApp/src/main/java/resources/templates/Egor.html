@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Егор - крутой и умный младший брат</title>
 </head>
 <body>
-
-<h2>Your Name is: </h2>
-<h2>Your Age is: &{age}</h2>
-
+    <p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
